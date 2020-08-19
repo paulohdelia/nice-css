@@ -1,0 +1,91 @@
+:root {
+  --color-facebook: #3b5998;
+  --color-twitter: #00acee;
+  --color-google-plus: #db4a39;
+  --color-linkedin: #0e76a8;
+  --color-instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100vh;
+
+  background-color: #EEEEEE;
+}
+
+section {
+  display: flex;
+}
+
+div {
+  transform: rotate(-30deg) skewX(
+    25deg);
+  height: 60px;
+  width: 60px;
+  margin: 0 30px;
+}
+
+.fa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+span {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.6s;
+  box-shadow: -1px 2px 2px rgba(0,0,0,.7);
+}
+
+div:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.2;
+}
+
+div:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.4;
+}
+
+div:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.6;
+}
+
+div:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+
+div span:first-child {
+  opacity: 0.2;
+}
+
+div:nth-child(1) span {
+  background-color: var(--color-facebook);
+}
+div:nth-child(2) span {
+  background-color: var(--color-twitter);
+}
+div:nth-child(3) span {
+  background-color:var(--color-google-plus);
+}
+div:nth-child(4) span {
+  background-color: var(--color-linkedin);
+}
+div:nth-child(5) span {
+  background: var(--color-instagram);
+}
